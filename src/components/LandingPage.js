@@ -82,12 +82,13 @@ function LandingPage() {
         var proxy = `https://manga-dex-reader.herokuapp.com/`
         var url = proxy + `https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`
         
-        const temp = await fetch(url, {
-            
-          }).then(blob => blob.json())
-  		.then(data => {
-    		console.table(data);
-    		document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+        const temp = await fetch(url)
+	.then(blob => blob.json())
+  	.then(data => {
+	console.table(data);
+	document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+	    return data;
+	})
         
                
         arr.push(temp.data[0].attributes.fileName)
