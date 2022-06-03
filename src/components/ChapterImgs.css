@@ -1,0 +1,23 @@
+.ChapterInfo{
+    text-align: center; 
+    background-color: grey;
+   
+}
+
+.prevAndNextButton{
+    display: space-between;
+    padding: 20px;
+}
+
+.prevButton{
+    margin-right: 15px;
+}
+
+.nextButton{
+    margin-right: 15px;
+}
+
+.scrollUpButton{
+    margin-right: 15px;
+    margin-left: 15px;
+}

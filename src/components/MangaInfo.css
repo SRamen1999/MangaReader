@@ -1,0 +1,24 @@
+.MangaInfo{
+    padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  text-align: center;
+}
+
+.grid-container-element { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    border: 1px solid black; 
+    width: 50%; 
+    
+} 
+.grid-child-element { 
+    margin: 10px; 
+    border: 1px solid red; 
+}
+
+.centerLoading{
+    text-align: center;
+}
