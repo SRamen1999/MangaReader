@@ -146,12 +146,11 @@ function LandingPage() {
         let arr = []
         for(let i = 0; i < item.length; i++){
         
-        const temp = await fetch(`https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`, {
-            method: 'GET',
-            mode: 'cors',
-            headers: {
-              'Access-Control-Allow-Origin':'*',
-            }
+        var proxy = `https://manga-dex-reader.herokuapp.com/`
+        var url = proxy + `https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`
+        
+        const temp = await fetch(url, {
+           
           })
            .then(res => res.json());
         
