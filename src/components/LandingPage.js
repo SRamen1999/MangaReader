@@ -79,13 +79,8 @@ function LandingPage() {
         let arr = []
         for(let i = 0; i < item.length; i++){
         
-        var proxy = `https://cors-anywhere.herokuapp.com/`
-        var url = proxy + `https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`
-        
-        const temp = await fetch(url, {
-           
-          })
-           .then(res => res.json());
+        const temp = await fetch(`https://manga-dex-reader-backend.herokuapp.com/topViewManga/${item[i].id}`)
+            .then(response => response.json())
         
                
         arr.push(temp.data[0].attributes.fileName)
@@ -144,14 +139,8 @@ function LandingPage() {
         let arr = []
         for(let i = 0; i < item.length; i++){
         
-        var proxy = `https://cors-anywhere.herokuapp.com/`
-        var url = proxy + `https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`
-        
-        const temp = await fetch(url, {
-           
-          })
-           .then(res => res.json());
-        
+        const temp = await fetch(`https://manga-dex-reader-backend.herokuapp.com/topRatingManga/${item[i].id}`)
+            .then(res => res.json());
            
         arr.push(temp.data[0].attributes.fileName)
         }
