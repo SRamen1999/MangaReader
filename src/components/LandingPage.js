@@ -79,7 +79,13 @@ function LandingPage() {
         let arr = []
         for(let i = 0; i < item.length; i++){
         
-        const temp = await fetch(`https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`)
+        const temp = await fetch(`https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`, {
+            mode: 'cors',
+            headers: {
+              'Access-Control-Allow-Origin':'*'
+            }
+          })
+          
             .then(response => response.json())
                
         arr.push(temp.data[0].attributes.fileName)
@@ -138,8 +144,13 @@ function LandingPage() {
         let arr = []
         for(let i = 0; i < item.length; i++){
         
-        const temp = await fetch(`https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`)
-            .then(res => res.json());
+        const temp = await fetch(`https://api.mangadex.org/cover?limit=1&manga%5B%5D=${item[i].id}`, {
+            mode: 'cors',
+            headers: {
+              'Access-Control-Allow-Origin':'*'
+            }
+          })
+           .then(res => res.json());
         
            
         arr.push(temp.data[0].attributes.fileName)
