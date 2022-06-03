@@ -84,9 +84,11 @@ function LandingPage() {
         
         const temp = await fetch(url, {
             
-          })
-          
-        .then(response => response.json())
+          }).then(blob => blob.json())
+  		.then(data => {
+    		console.table(data);
+    		document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+        
                
         arr.push(temp.data[0].attributes.fileName)
         }
