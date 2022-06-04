@@ -192,7 +192,7 @@ function LandingPage() {
                 {
                     topMangaViewCover.length > 0 ?
                     (
-                        <img src ={`https://uploads.mangadex.org/covers/${item.id}/${topMangaViewCover[pos]}`} width="227px" height="335px"/>
+                        <img src ={`https://mangadex.org/covers/${item.id}/${topMangaViewCover[pos]}`} width="227px" height="335px"/>
                     ):
                     ""
                 }
@@ -247,7 +247,7 @@ function LandingPage() {
                 {
                     topRaitingMangaCovers.length > 0 ?
                     (
-                        <img src ={`https://uploads.mangadex.org/covers/${item.id}/${topRaitingMangaCovers[pos]}`} width="227px" height="335px"/>
+                        <img src ={`https://mangadex.org/covers/${item.id}/${topRaitingMangaCovers[pos]}`} width="227px" height="335px"/>
                     ):
                     ""
                 }
